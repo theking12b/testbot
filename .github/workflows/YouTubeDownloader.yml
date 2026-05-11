@@ -332,7 +332,7 @@ jobs:
               echo "   Parts size: ${THRESHOLD_MB}MB each"
               
               cd ./downloads
-              zip -r -s "${THRESHOLD_MB}m" "${basename}.zip" "temp/${basename}"
+              zip -10 -r -s "${THRESHOLD_MB}m" "${basename}.zip" "temp/${basename}"
               cd ..
               
               PARTS_COUNT=$(ls ./downloads/${basename}.z* 2>/dev/null | wc -l)
